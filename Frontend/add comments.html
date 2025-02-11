@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إضافة تعليق</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .comment-modal {
+            background: white;
+            width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            position: relative;
+        }
+
+        .comment-modal .close-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 20px;
+            height: 20px;
+            background: #ccc;
+            color: black;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .comment-modal h1 {
+            text-align: right;
+            font-size: 18px;
+            margin: 0 0 20px;
+        }
+
+        .comment-modal textarea {
+            width: 95%;
+            height: 250px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #eaf4ec;
+            padding: 10px;
+            font-size: 16px;
+            text-align: right;
+            resize: none;
+            outline: none;
+            margin-right: auto;
+        }
+
+        .comment-modal textarea::placeholder {
+            text-align: right;
+            color: #aaa;
+        }
+
+        .comment-modal .buttons {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+
+        .comment-modal button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+            width: auto;
+        }
+
+        .comment-modal .add-button {
+            background: #28a745;
+            color: white;
+        }
+
+        .comment-modal .cancel-button {
+            background: #333;
+            color: white;
+        }
+
+        .comment-modal button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="comment-modal">
+    <div class="close-icon" onclick="closeModal()">&times;</div>
+    <h1>إضافة تعليق</h1>
+    <textarea placeholder="اكتب هنا ..."></textarea>
+    <div class="buttons">
+        <button class="cancel-button" onclick="cancelAction()">إلغاء</button>
+        <button class="add-button" onclick="addComment()">إضافة</button>
+    </div>
+</div>
+
+<script>
+    function closeModal() {
+        alert('تم إغلاق النافذة.');
+    }
+
+    function cancelAction() { window.location.href = 'table page.html'; 
+    }
+
+    function addComment() {
+    alert('تمت إضافة التعليق.');
+    window.location.href = 'table page.html';
+}
+</script>
+
+</body>
+</html>
