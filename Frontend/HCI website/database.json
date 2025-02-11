@@ -1,0 +1,22 @@
+{
+  "programs": [
+    {
+      "id": 1,
+      "school_name": "كلية الهندسة",
+      "department": "قسم البرمجيات",
+      "degree": "بكالوريوس",
+      "program_name": "هندسة البرمجيات",
+      "capacity": 100,
+      "current_students": 80
+    },
+    {
+      "id": 2,
+      "school_name": "كلية الطب",
+      "department": "قسم الكيمياء",
+      "degree": "ماجستير",
+      "program_name": "الكيمياء الطبية",
+      "capacity": 50,
+      "current_students": 45
+    }
+  ]
+}

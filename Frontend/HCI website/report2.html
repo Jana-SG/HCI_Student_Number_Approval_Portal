@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض التقرير</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .popup-overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th, table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #00A650; 
+            color: white; 
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center; 
+            gap: 10px; 
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        button:first-child {
+            background-color: #4CAF50; 
+            color: white;
+        }
+
+        button:last-child {
+            background-color: black; 
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <h2>عرض التقرير</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>الاسم</th>
+                        <th>المنصب</th>
+                        <th>القرار</th>
+                        <th>التعليقات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>محمد أحمد</td>
+                        <td>مدير</td>
+                        <td>قرار 1</td>
+                        <td>تعليق 1</td>
+                    </tr>
+                    <tr>
+                        <td>علي محمود</td>
+                        <td>نائب مدير</td>
+                        <td>قرار 2</td>
+                        <td>تعليق 2</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="buttons">
+                <button onclick="saveReport()">حفظ</button>
+                <button onclick="closePopup()">إغلاق</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function saveReport() {
+            alert("تم حفظ التقرير بنجاح!");
+            closePopup();
+            window.location.href = 'table page.html'; 
+        }         
+
+        function closePopup() {
+            document.getElementById('popupOverlay').style.display = 'none';
+            window.location.href = 'table page.html'; 
+        }
+
+        
+        window.onload = function() {
+            document.getElementById('popupOverlay').style.display = 'flex';
+        };
+    </script>
+</body>
+</html>
