@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Interface</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .chat-container {
+      width: 400px;
+      height: 500px;
+      background-color: #C3E5C0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chat-header {
+      background-color: #e0e0e0;
+      padding: 10px;
+      text-align: right;
+      font-size: 14px;
+      color: #333;
+      position: relative;
+    }
+
+    .chat-header .close-button {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .chat-body {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      background-color: #D8E6E191;
+      flex-grow: 1;
+      overflow-y: auto;
+    }
+
+    .message {
+      display: flex;
+      align-items: center;
+      max-width: 80%;
+    }
+
+    .message.user {
+      align-self: flex-start;
+    }
+
+    .message.responder {
+      align-self: flex-end;
+    }
+
+    .message-bubble {
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 10px;
+      position: relative;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .message.user .message-bubble {
+      border-bottom-left-radius: 2px;
+    }
+
+    .message.responder .message-bubble {
+      border-bottom-right-radius: 2px;
+    }
+
+    .message-bubble::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    .message.user .message-bubble::after {
+      top: 10px;
+      left: -10px;
+      border-width: 6px 10px 6px 0;
+      border-color: transparent #fff transparent transparent;
+    }
+
+    .message.responder .message-bubble::after {
+      top: 10px;
+      right: -10px;
+      border-width: 6px 0 6px 10px;
+      border-color: transparent transparent transparent #fff;
+    }
+
+    .profile-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #ccc;
+      margin: 0 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .profile-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .message.user .profile-icon {
+      order: -1;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <span id="close-button" class="close-button">&times;</span>
+      للتعليقات
+    </div>
+    <div class="chat-body">
+      <div class="message user">
+        <div class="profile-icon">
+          <img src="DeptHead.png" alt="User">
+        </div>
+        <div class="message-bubble">برأيي عدد الطلاب اقل مما يبرر فتح القبول لهذا الفصل</div>
+      </div>
+      <div class="message responder">
+        <div class="message-bubble"> نحن بانتظار تعيين اعضاء تدريس قريبا فربما امكننا رفع الطاقة الاستيعابيه في الدورة القادمة</div>
+        <div class="profile-icon">
+          <img src="Dean.png" alt="Responder">
+        </div>
+      </div>
+      <div class="message user">
+        <div class="profile-icon">
+          <img src="VicePresident.png" alt="User">
+        </div>
+        <div class="message-bubble">انا مع تأجيل فتح القبول للفصل القادم</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    
+    document.getElementById('close-button').addEventListener('click', function() {
+    
+      window.location.href = 'table page.html';
+    });
+  </script>
+</body>
+</html>
