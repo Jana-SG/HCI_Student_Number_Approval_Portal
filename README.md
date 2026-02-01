@@ -83,10 +83,7 @@ We followed a structured HCI methodology:
 ## 🎥 Demo Video
 
 You can watch the full system demonstration video below:
-
-<video src="System demo hci.mp4" controls width="100%"></video>
-
->  Note: GitHub preview may not autoplay videos directly. If it doesn't render, download the file and play locally.
+[Watch Demo Video](https://drive.google.com/file/d/14YBKigsmnIdn9Q1XoTOPKohq-XkLhUV6/view)
 
 ---
 
