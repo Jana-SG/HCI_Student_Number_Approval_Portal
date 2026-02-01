@@ -25,13 +25,13 @@ This project focuses on applying **Human-Computer Interaction (HCI) principles**
 
 We followed a structured HCI methodology:
 
-- 🔍 Stakeholder interviews (Heads of Departments, Deans, Vice Presidents)
-- 📝 Task analysis & requirement gathering
-- 📐 Low-fidelity wireframes
-- 🎨 Medium-fidelity prototypes
-- 💻 High-fidelity interactive prototype (Figma)
-- 🧪 Heuristic evaluation
-- 🤝 Cooperative usability evaluation
+- Stakeholder interviews (Heads of Departments, Deans, Vice Presidents)
+- Task analysis & requirement gathering
+- Low-fidelity wireframes
+- Medium-fidelity prototypes
+- High-fidelity interactive prototype (Figma)
+- Heuristic evaluation
+- Cooperative usability evaluation
 
 ---
 
